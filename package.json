@@ -1,0 +1,16 @@
+{
+  "name": "board-game-platform",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace=@board-game/server",
+    "dev:client": "npm run dev --workspace=@board-game/client",
+    "build:shared": "npm run build --workspace=@board-game/shared",
+    "build:client": "npm run build --workspace=@board-game/client",
+    "build:server": "npm run build --workspace=@board-game/server",
+    "build": "npm run build:shared && npm run build:client && npm run build:server",
+    "start": "npm run start --workspace=@board-game/server"
+  }
+}
